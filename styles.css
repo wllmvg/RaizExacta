@@ -1,6 +1,8 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
     display: flex;
@@ -90,12 +92,18 @@ button:hover {
     color: #333;
 }
 
+
 #raiz {
     color: #4CAF50;
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #2e302c; /* Fondo suave para resaltar */
+    padding: 10px; /* Espaciado alrededor del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto más resaltado */
 }
-
 
 table {
     width: 100%;
@@ -142,3 +150,24 @@ tr:nth-child(even) td {
         font-size: 0.9rem;
     }
 }
+
+.contenedor {
+    text-align: left; /* Alinea el contenido a la izquierda */
+}
+
+.boton {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #202020;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline; /* El botón se ajusta al tamaño del texto */
+}
+
+.boton:hover {
+    background-color: #333333;
+}
+
+
