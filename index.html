@@ -3,29 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Newton-Raphson</title>
+    <title>Calculadora de Raíces con Newton-Raphson</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="math.js"></script>
 </head>
+<header>
+    Calculadora de Raíces de Ecuaciones - Método de Newton-Raphson
+</header>
 <body>
-    <h1>Calculadora Interactiva de Raíces con Método de Newton-Raphson</h1>
-    <form id="newtonForm">
-        <label for="funcion">Función f(x):</label>
-        <input type="text" id="funcion" placeholder="Ejemplo: Math.pow(x, 2) - 2" required>
-        <br>
-        <label for="x0">Valor inicial (x0):</label>
-        <input type="number" id="x0" step="0.1" required>
-        <br>
-        <label for="tolerancia">Tolerancia:</label>
-        <input type="number" id="tolerancia" step="0.0001" value="0.000001">
-        <br>
-        <label for="maxIter">Número máximo de iteraciones:</label>
-        <input type="number" id="maxIter" value="100">
-        <br><br>
-        <button type="button" onclick="calcularNewtonRaphson()">Calcular</button>
-    </form>
-    <h2>Resultados:</h2>
-    <div id="resultado"></div>
+    <div class="container">
+        <form id="calc-form">
+            <label for="funcion">Función (en términos de x):</label>
+            <input type="text" id="funcion" name="funcion" required>
+            
+            <label for="x0">Valor inicial (x₀):</label>
+            <input type="number" id="x0" name="x0" step="any" required>
+            
+            <button type="submit">Calcular Raíz</button>
+        </form>
+
+        <h2 id="raiz"></h2>
+
+        <h3>Resultados de las iteraciones:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Iteración</th>
+                    <th>x</th>
+                    <th>f(x)</th>
+                    <th>f'(x)</th>
+                    <th>Raiz Aproximada</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-resultados">
+                <!-- Resultados aparecerán aquí -->
+            </tbody>
+        </table>
+    </div>
 
     <script src="script.js"></script>
+    <footer>
+        William Felipe Melgarejo Vega
+        <br>
+        2024
+    </footer>
 </body>
 </html>
